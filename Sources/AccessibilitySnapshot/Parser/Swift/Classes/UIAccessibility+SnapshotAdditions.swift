@@ -401,179 +401,40 @@ extension NSObject {
         // MARK: - Life Cycle
 
         init(locale: String?) {
-            self.selectedTraitName = "Selected.".localized(
-                key: "trait.selected.description",
-                comment: "Description for the 'selected' accessibility trait",
-                locale: locale
-            )
-            self.selectedTraitFormat = "Selected: %@".localized(
-                key: "trait.selected.format",
-                comment: "Format for the description of the selected element; param0: the description of the element",
-                locale: locale
-            )
-            self.notEnabledTraitName = "Dimmed.".localized(
-                key: "trait.not_enabled.description",
-                comment: "Description for the 'not enabled' accessibility trait",
-                locale: locale
-            )
-            self.buttonTraitName = "Button.".localized(
-                key: "trait.button.description",
-                comment: "Description for the 'button' accessibility trait",
-                locale: locale
-            )
-            self.backButtonTraitName = "Back Button.".localized(
-                key: "trait.backbutton.description",
-                comment: "Description for the 'back button' accessibility trait",
-                locale: locale
-            )
-            self.backDescriptor = "Back".localized(
-                key: "back.descriptor",
-                comment: "Descriptor for the 'back' portion of the 'back button' accessibility trait",
-                locale: locale
-            )
-            self.tabTraitName = "Tab.".localized(
-                key: "trait.tab.description",
-                comment: "Description for the 'tab' accessibility trait",
-                locale: locale
-            )
-            self.headerTraitName = "Heading.".localized(
-                key: "trait.header.description",
-                comment: "Description for the 'header' accessibility trait",
-                locale: locale
-            )
-            self.linkTraitName = "Link.".localized(
-                key: "trait.link.description",
-                comment: "Description for the 'link' accessibility trait",
-                locale: locale
-            )
-            self.adjustableTraitName = "Adjustable.".localized(
-                key: "trait.adjustable.description",
-                comment: "Description for the 'adjustable' accessibility trait",
-                locale: locale
-            )
-            self.adjustableTraitHint = "Swipe up or down with one finger to adjust the value.".localized(
-                key: "trait.adjustable.hint",
-                comment: "Hint describing how to use elements with the 'adjustable' accessibility trait",
-                locale: locale
-            )
-            self.adjustableTraitHintFormat = "%@. Swipe up or down with one finger to adjust the value.".localized(
-                key: "trait.adjustable.hint_format",
-                comment: "Format for hint describing how to use elements with the 'adjustable' accessibility trait; " +
-                         "param0: the existing hint",
-                locale: locale
-            )
-            self.imageTraitName = "Image.".localized(
-                key: "trait.image.description",
-                comment: "Description for the 'image' accessibility trait",
-                locale: locale
-            )
-            self.searchFieldTraitName = "Search Field.".localized(
-                key: "trait.search_field.description",
-                comment: "Description for the 'search field' accessibility trait",
-                locale: locale
-            )
-            self.switchButtonTraitName = "Switch Button.".localized(
-                key: "trait.switch_button.description",
-                comment: "Description for the 'switch button' accessibility trait",
-                locale: locale
-            )
-            self.switchButtonOnStateName = "On.".localized(
-                key: "trait.switch_button.state_on.description",
-                comment: "Description for the 'switch button' accessibility trait, when the switch is on",
-                locale: locale
-            )
-            self.switchButtonOffStateName = "Off.".localized(
-                key: "trait.switch_button.state_off.description",
-                comment: "Description for the 'switch button' accessibility trait, when the switch is off",
-                locale: locale
-            )
-            self.switchButtonMixedStateName = "Mixed.".localized(
-                key: "trait.switch_button.state_mixed.description",
-                comment: "Description for the 'switch button' accessibility trait, when the switch is in a mixed state",
-                locale: locale
-            )
-            self.switchButtonTraitHint = "Double tap to toggle setting.".localized(
-                key: "trait.switch_button.hint",
-                comment: "Hint describing how to use elements with the 'switch button' accessibility trait",
-                locale: locale
-            )
-            self.switchButtonTraitHintFormat = "%@. Double tap to toggle setting.".localized(
-                key: "trait.switch_button.hint_format",
-                comment: "Format for hint describing how to use elements with the 'switch button' accessibility trait; " +
-                         "param0: the existing hint",
-                locale: locale
-            )
-            self.seriesContextFormat = "%@ %@ of %@.".localized(
-                key: "context.series.description_format",
-                comment: "Format for the description of an element in a series; param0: the description of the element, " +
-                         "param1: the index of the element in the series, param2: the number of elements in the series",
-                locale: locale
-            )
-            self.dataTableRowSpanFormat = "Spans %@ rows.".localized(
-                key: "context.data_table.row_span_format",
-                comment: "Format for the description of the height of a cell in a table; param0: the number of rows the cell spans",
-                locale: locale
-            )
-            self.dataTableColumnSpanFormat = "Spans %@ columns.".localized(
-                key: "context.data_table.column_span_format",
-                comment: "Format for the description of the width of a cell in a table; param0: the number of columns the cell spans",
-                locale: locale
-            )
-            self.dataTableRowFormat = "Row %@.".localized(
-                key: "context.data_table.row_format",
-                comment: "Format for the description of the vertical location of a cell in a table; param0: the row in which the cell resides",
-                locale: locale
-            )
-            self.dataTableColumnFormat = "Column %@.".localized(
-                key: "context.data_table.column_format",
-                comment: "Format for the description of the horizontal location of a cell in a table; param0: the column in which the cell resides",
-                locale: locale
-            )
-            self.listStartContext = "List Start.".localized(
-                key: "context.list_start.description",
-                comment: "Description of the first element in a list",
-                locale: locale
-            )
-            self.listEndContext = "List End.".localized(
-                key: "context.list_end.description",
-                comment: "Description of the last element in a list",
-                locale: locale
-            )
-            self.landmarkStartContext = "Landmark.".localized(
-                key: "context.landmark_start.description",
-                comment: "Description of the first element in a landmark container",
-                locale: locale
-            )
-            self.landmarkEndContext = "End.".localized(
-                key: "context.landmark_end.description",
-                comment: "Description of the last element in a landmark container",
-                locale: locale
-            )
-            self.textEntryTraitName = "Text Field.".localized(
-                key: "trait.text_field.description",
-                comment: "Description for the 'text entry' accessibility trait",
-                locale: locale
-            )
-            self.textEntryTraitHint = "Double tap to edit.".localized(
-                key: "trait.text_field.hint",
-                comment: "Hint describing how to use elements with the 'text entry' accessibility trait",
-                locale: locale
-            )
-            self.textEntryIsEditingTraitHint = "Use the rotor to access Misspelled Words".localized(
-                key: "trait.text_field_is_editing.hint",
-                comment: "Hint describing how to use elements with the 'text entry' accessibility trait when they are being edited",
-                locale: locale
-            )
-            self.scrollableTextEntryTraitHint = "Double tap to edit., Use the rotor to access Misspelled Words".localized(
-                key: "trait.scrollable_text_field.hint",
-                comment: "Hint describing how to use elements with the 'text entry' and 'scrollable' accessibility traits",
-                locale: locale
-            )
-            self.isEditingTraitName = "Is editing.".localized(
-                key: "trait.text_field_is_editing.description",
-                comment: "Description for the 'is editing' accessibility trait",
-                locale: locale
-            )
+            self.selectedTraitName = "Selected."
+            self.selectedTraitFormat = "Selected: %@"
+            self.notEnabledTraitName = "Dimmed."
+            self.buttonTraitName = "Button."
+            self.backButtonTraitName = "Back Button."
+            self.backDescriptor = "Back"
+            self.tabTraitName = "Tab."
+            self.headerTraitName = "Heading."
+            self.linkTraitName = "Link."
+            self.adjustableTraitName = "Adjustable."
+            self.adjustableTraitHint = "Swipe up or down with one finger to adjust the value."
+            self.adjustableTraitHintFormat = "%@. Swipe up or down with one finger to adjust the value."
+            self.imageTraitName = "Image."
+            self.searchFieldTraitName = "Search Field."
+            self.switchButtonTraitName = "Switch Button."
+            self.switchButtonOnStateName = "On."
+            self.switchButtonOffStateName = "Off."
+            self.switchButtonMixedStateName = "Mixed."
+            self.switchButtonTraitHint = "Double tap to toggle setting."
+            self.switchButtonTraitHintFormat = "%@. Double tap to toggle setting."
+            self.seriesContextFormat = "%@ %@ of %@."
+            self.dataTableRowSpanFormat = "Spans %@ rows."
+            self.dataTableColumnSpanFormat = "Spans %@ columns."
+            self.dataTableRowFormat = "Row %@."
+            self.dataTableColumnFormat = "Column %@."
+            self.listStartContext = "List Start."
+            self.listEndContext = "List End."
+            self.landmarkStartContext = "Landmark."
+            self.landmarkEndContext = "End."
+            self.textEntryTraitName = "Text Field."
+            self.textEntryTraitHint = "Double tap to edit."
+            self.textEntryIsEditingTraitHint = "Use the rotor to access Misspelled Words"
+            self.scrollableTextEntryTraitHint = "Double tap to edit., Use the rotor to access Misspelled Words"
+            self.isEditingTraitName = "Is editing."
         }
 
     }
