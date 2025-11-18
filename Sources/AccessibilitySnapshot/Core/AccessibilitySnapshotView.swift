@@ -183,7 +183,7 @@ public final class AccessibilitySnapshotView: SnapshotAndLegendView {
                 overlayView.layer.addSublayer(overlayLayer)
             }
 
-            var displayMarker = DisplayMarker(
+            let displayMarker = DisplayMarker(
                 marker: marker,
                 legendView: legendView,
                 overlayView: overlayView,
@@ -200,15 +200,6 @@ public final class AccessibilitySnapshotView: SnapshotAndLegendView {
                 guard containedView.bounds.contains(marker.activationPoint) else {
                     break
                 }
-
-                let activationPointView = UIImageView(
-                    image: UIImage(named: "Crosshairs", in: Bundle.accessibilitySnapshotResources, compatibleWith: nil)
-                )
-                activationPointView.bounds.size = .init(width: 16, height: 16)
-                activationPointView.center = marker.activationPoint
-                activationPointView.tintColor = color
-                snapshotView.addSubview(activationPointView)
-                displayMarker.activationPointView = activationPointView
 
             case .never:
                 break // No-op.

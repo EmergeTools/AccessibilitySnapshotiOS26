@@ -177,14 +177,6 @@ private struct MarkerOverlayView: View {
             case let .path(path):
                 Path(path.cgPath)
                     .stroke(color.opacity(0.3), lineWidth: 4)
-
-                if shouldShowActivationPoint {
-                    Image("Crosshairs", bundle: .accessibilitySnapshotResources)
-                        .resizable()
-                        .frame(width: 16, height: 16)
-                        .foregroundColor(color)
-                        .position(marker.activationPoint)
-                }
             }
         }
     }

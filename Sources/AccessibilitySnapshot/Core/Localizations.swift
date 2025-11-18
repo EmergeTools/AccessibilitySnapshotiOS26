@@ -12,43 +12,17 @@ import AccessibilitySnapshotParser
 enum Strings {
 
     static func actionsAvailableText(for locale: String?) -> String {
-        return "Actions Available".as_localized(
-            key: "custom_actions.description",
-            comment: "Description for an accessibility element indicating that it has custom actions available",
-            locale: locale
-        )
+        return "Actions Available"
     }
 
     static func moreContentAvailableText(for locale: String?) -> String {
-        return "More Content Available".as_localized(
-            key: "custom_content.description",
-            comment: "Description for an accessibility element indicating that it has additional custom content available",
-            locale: locale
-        )
+        return "More Content Available"
     }
     
     static func adjustableInputLabelText(for locale: String?) -> String {
-        return "Adjustable.".as_localized(
-            key: "trait.adjustable.inputLabel",
-            comment: "Description for the 'adjustable' input label in legend view",
-            locale: locale
-        )
+        return "Adjustable."
     }
     static func buttonInputLabelText(for locale: String?) -> String {
-        return "Button.".as_localized(
-            key: "trait.button.inputLabel",
-            comment: "Description for the 'button' input label in legend view",
-            locale: locale
-        )
+        return "Button."
     }
-}
-
-extension String {
-
-    func as_localized(key: String, comment: String, locale: String?, file: StaticString = #file) -> String {
-        let bundle = StringLocalization.preferredBundle(for: locale)
-
-        return bundle.localizedString(forKey: key, value: self, table: nil)
-    }
-
 }
